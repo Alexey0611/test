@@ -28,10 +28,10 @@ def element_click(xpath, driver):
     element.click()
 
 def login(login, password):
-    driver = get_driver()
-    element_send_keys(xpath="user-name", driver=driver, text=login)
-    element_send_keys(xpath="password", driver=driver, text=password)
-    element_click(xpath='login-button', driver=driver)
+    driver1 = get_driver()
+    element_send_keys(xpath="user-name", driver=driver1, text=login)
+    element_send_keys(xpath="password", driver=driver1, text=password)
+    element_click(xpath='login-button', driver=driver1)
 
 
 def get_element_by_id(xpath, driver):
