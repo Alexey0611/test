@@ -20,7 +20,9 @@ def get_driver():
     return driver
 
 
-def open_page(driver, url):
+
+def open_page(url):
+    driver = get_driver()
     driver.get(url)
 
 def element_click(xpath, driver):
@@ -43,9 +45,15 @@ def element_send_keys(xpath, driver, text):
     element.clear()
     element.send_keys(text)
 
+<<<<<<< HEAD
 
 driver = get_driver()
 open_page(driver, URL)
+=======
+# 1
+# driver = get_driver()
+open_page(URL)
+>>>>>>> 64e886eceeb04a24ff245ccd864dcbc7927b2f25
 login(login=LOGIN, password=PASSWORD)
 
 driver.quit()
