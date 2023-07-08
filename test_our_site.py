@@ -20,7 +20,8 @@ def get_driver():
     return driver
 
 
-def open_page(driver, url):
+def open_page(url):
+    driver = get_driver()
     driver.get(url)
 
 def element_click(xpath, driver):
@@ -28,10 +29,10 @@ def element_click(xpath, driver):
     element.click()
 
 def login(login, password):
-    driver1 = get_driver()
-    element_send_keys(xpath="user-name", driver=driver1, text=login)
-    element_send_keys(xpath="password", driver=driver1, text=password)
-    element_click(xpath='login-button', driver=driver1)
+    driver = get_driver()
+    element_send_keys(xpath="user-name", driver=driver, text=login)
+    element_send_keys(xpath="password", driver=driver, text=password)
+    element_click(xpath='login-button', driver=driver)
 
 
 def get_element_by_id(xpath, driver):
@@ -44,8 +45,8 @@ def element_send_keys(xpath, driver, text):
     element.send_keys(text)
 
 # 1
-driver = get_driver()
-open_page(driver, URL)
+# driver = get_driver()
+open_page(URL)
 login(login=LOGIN, password=PASSWORD)
 
 driver.quit()
