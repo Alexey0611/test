@@ -20,6 +20,7 @@ def get_driver():
     return driver
 
 
+
 def open_page(url):
     driver = get_driver()
     driver.get(url)
