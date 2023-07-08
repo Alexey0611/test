@@ -50,4 +50,4 @@ def element_send_keys(xpath, driver, text):
 open_page(URL)
 login(login=LOGIN, password=PASSWORD)
 
-driver.quit()
+#driver.quit()
